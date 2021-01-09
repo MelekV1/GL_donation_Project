@@ -1,5 +1,5 @@
 <?php
-include("PhpComponent/config.php");
+include_once("PhpComponent/config.php");
 
 $query2="SELECT * FROM `Besoin`";
 $result2=mysqli_query($link,$query2);

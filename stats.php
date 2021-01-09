@@ -7,6 +7,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
 }
+include_once("PhpComponent/component.php");
+include_once("PhpComponent/fetch1.php");
+include_once("PhpComponent/fetch.php");
+include_once("PhpComponent/fetch3.php");
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -58,8 +62,30 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         </nav>
     </div>
 </div>
-<div class="page-header">
-    <h1> Welcome  <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
+<div class="container">
+    <div class="page-header">
+        <h1> Welcome  <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
+    </div>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Nombre de propositions de dons reçues</th>
+                <th scope="col">Nombre de donateurs</th>
+                <th scope="col">Nombre de propositions de dons acceptées</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><?php echo $countOffer?></td>
+                <td><?php echo $countDonateur?></td>
+                <td><?php echo $countAll-$countOffer?></td>
+            </tr>
+
+        </tbody>
+
+</table>
 </div>
+
 </body>
 </html>

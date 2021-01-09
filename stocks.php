@@ -1,16 +1,20 @@
 <?php
-// Initialize the session
+
 session_start();
 
-// Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
 }
-
+$keyword="";
+if(isset($_Post['key']))
+{
+    echo "<script>alert($key)</script>";
+}
 include_once("PhpComponent/fetch.php");
 include_once("PhpComponent/component.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -61,9 +65,24 @@ include_once("PhpComponent/component.php");
         </nav>
     </div>
 </div>
+
 <div class="container">
   <div class="page-header">
-      <h1> Welcome  <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
+      <h1>Bienvenue  <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
+        <script>
+            function myFunction(event){
+                alert(event.target.value());
+            }
+        </script>
+        
+      <form class="form-inline" >
+            <input class="form-control mr-sm-2" 
+            name="key" type="search" 
+            placeholder="Search" 
+            aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+        </form>
+    
       <table class="table">
         <thead>
             <tr>
