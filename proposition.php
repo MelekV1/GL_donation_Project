@@ -30,28 +30,36 @@
                 </button>
             </div>
             <div class="collapse navbar-collapse col-4" style="font-family: 'IM Fell French Canon SC', serif;" id="navbarColor02">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Acceuil
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Besoin.php">Besoin actuelle</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="proposition.php">Proposition de don</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Panier.php">Panier</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.php">Espace Membre</a>
-                    </li>
-                </ul>
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="index.html"><h1>Acceuil</h1>
+                          <span class="sr-only">(current)</span>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="Besoin.php"><h3>Besoin</h3></a>
+                  </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="proposition.php"><h3>Proposition</h3></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="Panier.php"><h3>Panier</h3></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="login.php"><h3>Membre</h3></a>
+                  </li>
+              </ul>
             </div>
         </nav>
     </div>
-</div>
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </body>
 </html>

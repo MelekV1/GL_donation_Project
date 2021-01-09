@@ -30,28 +30,59 @@
                 </button>
             </div>
             <div class="collapse navbar-collapse col-4" style="font-family: 'IM Fell French Canon SC', serif;" id="navbarColor02">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Acceuil
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Besoin.php">Besoin actuelle</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="proposition.php">Proposition de don</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Panier.php">Panier</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.php">Espace Membre</a>
-                    </li>
-                </ul>
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item ">
+                      <a class="nav-link" href="index.html"><h1>Acceuil</h1>
+                      </a>
+                  </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="Besoin.php"><h3>Besoin</h3>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="proposition.php"><h3>Proposition</h3></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="Panier.php"><h3>Panier</h3></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="login.php"><h3>Membre</h3></a>
+                  </li>
+              </ul>
             </div>
         </nav>
     </div>
-</div>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card">
+            <h5 class="card-header">AZITROMIN DUO 500 mg Comp. Pell. Séc. B/2</h5>
+            <div class="card-body">
+              <p class="card-text">Elles procèdent de l`activité antibactérienne </p>
+              <a href="#" class="btn btn-primary">proposer ce don</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <h5 class="card-header">ARADEUX PLUS 150/5 150 mg/5 mg Comp. Pell. B/30</h5>
+            <div class="card-body">
+              <p class="card-text">Traitement de l"hypertension artérielle essentielle</p>
+              <a href="#" class="btn btn-primary">proposer ce don</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <h5 class="card-header">ROSUVASCOR 20 mg comp. Pell. B/30</h5>
+            <div class="card-body">
+              <p class="card-text">Traitement des hypercholestérolémies</p>
+              <a href="#" class="btn btn-primary">proposer ce don</a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
 </body>
 </html>

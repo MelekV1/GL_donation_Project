@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+include_once("PhpComponent/fetch1.php");
+include_once("PhpComponent/component.php");
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -30,26 +39,57 @@
                 </button>
             </div>
             <div class="collapse navbar-collapse col-4" style="font-family: 'IM Fell French Canon SC', serif;" id="navbarColor02">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="stocks.php">Stocks</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="offres.php">Offres actuelles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="statis.php">statistiques</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="logout.php">logout</a>
-                    </li>
-                </ul>
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="stocks.php"><h1>Stocks</h1></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="offres.php"><h1>Offres</h1></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="stats.php"><h1>statistiques</h1></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="logout.php"><h1>logout</h1></a>
+                  </li>
+              </ul>
             </div>
         </nav>
     </div>
 </div>
 <div class="page-header">
-    <h1> Welcome  <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
+  <div class="container">
+    <div class="page-header">
+        <h1> Welcome  <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
+        <table class="table">
+          <thead>
+              <tr>
+                <th scope="col">Ref</th>
+                <th scope="col">Item</th>
+                <th scope="col">Nom donateur</th>
+                <th scope="col">Num tel</th>
+                <th scope="col">Addresse</th>
+                <th scope="col">date_reception</th>
+                <th scope="col">Accepter</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+                while($row = mysqli_fetch_assoc($result1)){
+                    component2(
+                        $row['Ref'],
+                        $row['desc'],
+                        $row['Nom_Donateur'],
+                        $row['Num_tel'],
+                        $row['Adresse'],
+                        $row['date_Reception'],
+                        );
+                    };
+              ?>
+            </tbody>
+        </table>
+    </div>
+  </div>
 </div>
 </body>
 </html>

@@ -1,8 +1,6 @@
 <?php
-// Initialize the session
 session_start();
 
-// Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
@@ -42,24 +40,26 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <div class="collapse navbar-collapse col-4" style="font-family: 'IM Fell French Canon SC', serif;" id="navbarColor02">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="stocks.php">Stocks</a>
+                        <a class="nav-link" href="stocks.php"><h1>Stocks</h1></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="offres.php">Offres actuelles</a>
+                        <a class="nav-link" href="offres.php"><h1>Offres</h1></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="statis.php">statistiques</a>
+                        <a class="nav-link" href="stats.php"><h1>statistiques</h1></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="logout.php">logout</a>
+                        <a class="nav-link" href="logout.php"><h1>logout</h1></a>
                     </li>
                 </ul>
             </div>
         </nav>
     </div>
 </div>
-<div class="page-header">
-    <h1> Welcome  <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
+<div class="container">
+  <div class="page-header">
+      <h1> Welcome  <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
+  </div>
 </div>
 </body>
 </html>

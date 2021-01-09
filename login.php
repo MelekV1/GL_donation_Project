@@ -1,26 +1,12 @@
 <?php
-// Initialize the session
 session_start();
 
-// Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: welcome.php");
     exit;
 }
 
-// Include config file
-// Include config file
-
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
-define('DB_NAME', 'gl_donation_project');
-$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
-
+include("PhpComponent/config.php");
 // Define variables and initialize with empty values
 $username = $password = "";
 $username_err = $password_err = "";
@@ -134,25 +120,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     </button>
                 </div>
                 <div class="collapse navbar-collapse col-4" style="font-family: 'IM Fell French Canon SC', serif;" id="navbarColor02">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Acceuil
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Besoin.php">Besoin actuelle</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="proposition.php">Proposition de don</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="panier.php">Panier</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.php">Espace Membre</a>
-                        </li>
-                    </ul>
+                  <ul class="navbar-nav mr-auto">
+                      <li class="nav-item">
+                          <a class="nav-link" href="index.html"><h1>Acceuil</h1>
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="Besoin.php"><h3>Besoin</h3></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="proposition.php"><h3>Proposition</h3></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="Panier.php"><h3>Panier</h3></a>
+                      </li>
+                      <li class="nav-item active">
+                          <a class="nav-link" href="login.php"><h3>Membre</h3></a>
+                      </li>
+                  </ul>
                 </div>
             </nav>
         </div>
