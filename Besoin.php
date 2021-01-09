@@ -46,7 +46,7 @@
                       <a class="nav-link" href="Panier.php"><h3>Panier</h3></a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="login.php"><h3>Membre</h3></a>
+                      <a class="nav-link" href="login.php"><h3> Membre </h3></a>
                   </li>
               </ul>
             </div>
