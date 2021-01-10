@@ -52,14 +52,31 @@
             </div>
         </nav>
     </div>
-    <form>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-      </div>
 
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    <div class="container">
+      <form action="PhpComponent/form_proposition.php" method="post">
+
+        <div class="form-group">
+          <input class="form-control" name="name" placeholder="prenom & nom" required>
+        </div>
+
+        <div class="form-group">
+          <input class="form-control" type="text" name="description" placeholder="description du don" required>
+        </div>
+
+        <div class="form-group" >
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="mail" placeholder="Adresse mail" required>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+
+        <div class="form-group">
+          <input class="form-control" type="tel" name="tel" placeholder="numéro de téléphone" required>
+        </div>
+
+
+        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
 </body>
 </html>
